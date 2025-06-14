@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, DragEvent } from 'react';
 import { UploadCloud, Image as ImageIcon } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -67,9 +66,9 @@ const ImageUploader: React.FC<ImageUploaderProps> = ({ onImageUpload, isLoading 
             <UploadCloud size={48} className="text-gray-400" />
         )}
         <h3 className="text-xl font-semibold text-gray-700">
-          {preview ? '¡Imagen Cargada!' : 'Arrastra y suelta la foto de tu destino'}
+          {preview ? 'Image Uploaded!' : 'Drag and drop a photo of your destination'}
         </h3>
-        <p className="text-gray-500">o si prefieres</p>
+        <p className="text-gray-500">or if you prefer</p>
         <input
           type="file"
           ref={fileInputRef}
@@ -83,9 +82,9 @@ const ImageUploader: React.FC<ImageUploaderProps> = ({ onImageUpload, isLoading 
           disabled={isLoading}
           className="bg-gradient-to-r from-blue-500 to-cyan-400 text-white font-bold py-2 px-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          {isLoading ? 'Analizando...' : 'Busca en tu dispositivo'}
+          {isLoading ? 'Analyzing...' : 'Browse your device'}
         </button>
-        {isLoading && <p className="text-sm text-gray-500 animate-pulse">Generando tu aventura...</p>}
+        {isLoading && <p className="text-sm text-gray-500 animate-pulse">Generating your adventure...</p>}
       </div>
     </motion.div>
   );

@@ -5,20 +5,20 @@ import TravelPlan, { TravelPlanData } from '@/components/TravelPlan';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Compass } from 'lucide-react';
 
-// Datos de ejemplo para simular la respuesta de la IA
+// Sample data to simulate AI response
 const sampleTravelPlan: TravelPlanData = {
-  destination: 'París, Francia',
+  destination: 'Paris, France',
   flights: { airline: 'Air France', price: '$750' },
   hotel: { name: 'Le Bristol Paris', rating: 5 },
   activities: [
-    'Visita a la Torre Eiffel y el Louvre',
-    'Paseo en barco por el río Sena',
-    'Explorar el barrio de Montmartre',
-    'Disfrutar de la gastronomía en Le Marais',
+    'Visit the Eiffel Tower and the Louvre',
+    'Take a boat trip on the Seine river',
+    'Explore the Montmartre district',
+    'Enjoy the gastronomy in Le Marais',
   ],
   nearby: [
-    'Excursión de un día al Palacio de Versalles',
-    'Visita a los jardines de Giverny de Monet',
+    'Day trip to the Palace of Versailles',
+    "Visit Monet's gardens in Giverny",
   ],
 };
 
@@ -30,9 +30,9 @@ const Index = () => {
   const handleImageUpload = (file: File) => {
     setImageFile(file);
     setIsLoading(true);
-    setTravelPlan(null); // Limpiar plan anterior
+    setTravelPlan(null); // Clear previous plan
     
-    // Simular el procesamiento de la IA
+    // Simulate AI processing
     setTimeout(() => {
       setTravelPlan(sampleTravelPlan);
       setIsLoading(false);
@@ -60,7 +60,7 @@ const Index = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto"
           >
-            Sube una foto de un lugar y deja que nuestra IA cree el plan de viaje perfecto para ti.
+            Upload a photo of a place and let our AI create the perfect travel plan for you.
           </motion.p>
         </header>
 
@@ -85,7 +85,7 @@ const Index = () => {
                         onClick={() => setTravelPlan(null)}
                         className="bg-gradient-to-r from-gray-600 to-gray-800 text-white font-bold py-2 px-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
                     >
-                        Planear otro viaje
+                        Plan another trip
                     </button>
                   </div>
               </motion.div>
@@ -94,7 +94,7 @@ const Index = () => {
         </main>
         
         <footer className="text-center mt-16 text-sm text-gray-500">
-            <p>Creado con ❤️ por Lovable.dev</p>
+            <p>Created with ❤️ by Lovable.dev</p>
         </footer>
       </div>
     </div>
