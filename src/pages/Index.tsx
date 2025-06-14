@@ -51,7 +51,7 @@ const Index = () => {
           >
             <Compass className="text-blue-500" size={40} />
             <h1 className="text-5xl font-extrabold tracking-tight">
-              Aventura IA
+              See & Go
             </h1>
           </motion.div>
           <motion.p 
